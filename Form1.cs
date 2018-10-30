@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,6 +41,8 @@ namespace Pokemon_RNG_Time_Calculator
 
         public int framemin;
         public int framemax;
+
+        public decimal frameDifference;
 
         public string RealTime => framemin == framemax ? "-" : Convert2timestr((framemin + 2 - Startingframe) / 60.0) + " ~ " + Convert2timestr((framemax - Startingframe) / 60.0);
 
@@ -88,14 +90,17 @@ namespace Pokemon_RNG_Time_Calculator
             //Disable fidget when Gen 6 is selected
             //to prevent any issues arising.
             if (gen6RadioButton.Checked == true)
-                {
+            {
+                npcCount.Enabled = false;
                 fidgetCheckBox.Checked = false;
                 fidgetCheckBox.Enabled = false;
-                }
+            }
             if (gen6RadioButton.Checked == false)
-                {
+            {
+                numberofnpcsLabel.Visible = true;
+                npcCount.Enabled = true;
                 fidgetCheckBox.Enabled = true;
-                }
+            }
         }
 
         private void oldGenRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -105,17 +110,19 @@ namespace Pokemon_RNG_Time_Calculator
             //dialogue with new dialogue explaining
             //the status of the older gens.
             if (oldGenRadioButton.Checked == true)
-                {
+            {
                 calculateButton.Enabled = false;
-                npcCount1.Visible = false;
+                npcCount.Enabled = false;
+                npcCountLabel.Visible = false;
                 oldGenLabel.Visible = true;
-                }
+            }
             if (oldGenRadioButton.Checked == false)
-                {
-                oldGenLabel.Visible = false;
-                npcCount1.Visible = true;
+            {
                 calculateButton.Enabled = true;
-                }
+                npcCountLabel.Visible = true;
+                oldGenLabel.Visible = false;
+                npcCount.Enabled = true;
+            }
         }
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
@@ -126,18 +133,36 @@ namespace Pokemon_RNG_Time_Calculator
             }
         }
         private void targetFrameBox_ValueChanged(object sender, EventArgs e)
-        {
-            if (targetFrameBox.Value >= 100000000 && wasExecuted == false)
-                {
-                popupWindow popupWindow = new popupWindow();
-                popupWindow.ShowDialog();
+        {    
+            frameDifference = targetFrameBox.Value - startingFrameBox.Value;
 
-                wasExecuted = true;
+            if (gen7RadioButton.Checked == false)
+            {
+                if (frameDifference >= 100000000 && wasExecuted == false)
+                {
+                    popupWindow popupWindow = new popupWindow();
+                    popupWindow.ShowDialog();
+
+                    wasExecuted = true;
                 }
+            }
+            else if (gen7RadioButton.Checked == true)
+            {
+                if (frameDifference >= 99999028 && wasExecuted == false)
+                {
+                    popupWindow popupWindow = new popupWindow();
+                    popupWindow.ShowDialog();
+
+                    wasExecuted = true;
+                }
+            }
         }
         private void calculateButton_Click(object sender, EventArgs e)
         {
+            if (gen6RadioButton.Checked == true)
+            {
 
+            }
         }
     }
 }
