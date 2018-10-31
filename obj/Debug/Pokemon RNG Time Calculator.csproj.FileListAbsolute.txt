@@ -9,3 +9,17 @@ C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon RNG Time Calculator\bin\Debug\
 C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon RNG Time Calculator\obj\Debug\Pokemon RNG Time Calculator.exe
 C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon RNG Time Calculator\obj\Debug\Pokemon RNG Time Calculator.pdb
 C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon RNG Time Calculator\obj\Debug\Pokemon_RNG_Time_Calculator.popupWindow.resources
+C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon-3DS-Time-Calculator\bin\Debug\Pokemon RNG Time Calculator.exe.config
+C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon-3DS-Time-Calculator\bin\Debug\Pokemon RNG Time Calculator.exe
+C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon-3DS-Time-Calculator\bin\Debug\Pokemon RNG Time Calculator.pdb
+C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon-3DS-Time-Calculator\obj\Debug\Pokemon RNG Time Calculator.csprojAssemblyReference.cache
+C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon-3DS-Time-Calculator\obj\Debug\Pokemon_RNG_Time_Calculator.Form1.resources
+C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon-3DS-Time-Calculator\obj\Debug\Pokemon_RNG_Time_Calculator.popupWindow.resources
+C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon-3DS-Time-Calculator\obj\Debug\Pokemon_RNG_Time_Calculator.Properties.Resources.resources
+C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon-3DS-Time-Calculator\obj\Debug\Pokemon RNG Time Calculator.csproj.GenerateResource.cache
+C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon-3DS-Time-Calculator\obj\Debug\Pokemon RNG Time Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon-3DS-Time-Calculator\obj\Debug\Pokemon RNG Time Calculator.exe
+C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon-3DS-Time-Calculator\obj\Debug\Pokemon RNG Time Calculator.pdb
+C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon-3DS-Time-Calculator\obj\Debug\Pokemon_RNG_Time_Calculator.popupWindow2.resources
+C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon-3DS-Time-Calculator\obj\Debug\Pokemon_RNG_Time_Calculator.popupWindow3.resources
+C:\Users\Kesava-64\Desktop\TimeCalculator\Pokemon-3DS-Time-Calculator\obj\Debug\Pokemon_RNG_Time_Calculator.targetFrameLowerError.resources
