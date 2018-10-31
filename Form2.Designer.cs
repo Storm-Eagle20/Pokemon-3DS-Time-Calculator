@@ -37,9 +37,9 @@
             // 
             this.understandButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.understandButton.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.understandButton.Location = new System.Drawing.Point(114, 118);
+            this.understandButton.Location = new System.Drawing.Point(114, 194);
             this.understandButton.Name = "understandButton";
-            this.understandButton.Size = new System.Drawing.Size(111, 52);
+            this.understandButton.Size = new System.Drawing.Size(111, 51);
             this.understandButton.TabIndex = 0;
             this.understandButton.Text = "I understand";
             this.understandButton.UseVisualStyleBackColor = true;
@@ -52,16 +52,15 @@
             this.warningLabel.ForeColor = System.Drawing.Color.Red;
             this.warningLabel.Location = new System.Drawing.Point(12, 9);
             this.warningLabel.Name = "warningLabel";
-            this.warningLabel.Size = new System.Drawing.Size(339, 100);
+            this.warningLabel.Size = new System.Drawing.Size(340, 180);
             this.warningLabel.TabIndex = 16;
-            this.warningLabel.Text = "Warning! Setting a frame above \r\n100 million may cause instability.\r\nBe cautious " +
-    "and don\'t go too high\r\nor you may strain your PC or crash\r\nthis program.";
+            this.warningLabel.Text = resources.GetString("warningLabel.Text");
             // 
             // popupWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 182);
+            this.ClientSize = new System.Drawing.Size(350, 257);
             this.Controls.Add(this.warningLabel);
             this.Controls.Add(this.understandButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -1,6 +1,6 @@
 ﻿namespace Pokemon_RNG_Time_Calculator
 {
-    partial class Form1
+    public partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -38,9 +38,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.gen6RadioButton = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.npcCount = new System.Windows.Forms.Label();
+            this.timeOutputBox = new System.Windows.Forms.TextBox();
+            this.numberofnpcsLabel = new System.Windows.Forms.Label();
+            this.npcCountLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.fidgetCheckBox = new System.Windows.Forms.CheckBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -51,13 +51,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.oldGenLabel = new System.Windows.Forms.Label();
-            this.npcCount1 = new System.Windows.Forms.NumericUpDown();
+            this.npcCount = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.targetFrameBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.startingFrameBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.npcCount1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npcCount)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -100,6 +100,7 @@
             // oldGenRadioButton
             // 
             this.oldGenRadioButton.AutoSize = true;
+            this.oldGenRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.oldGenRadioButton.Location = new System.Drawing.Point(117, 86);
             this.oldGenRadioButton.Name = "oldGenRadioButton";
             this.oldGenRadioButton.Size = new System.Drawing.Size(17, 16);
@@ -111,6 +112,7 @@
             // 
             this.gen7RadioButton.AutoSize = true;
             this.gen7RadioButton.Checked = true;
+            this.gen7RadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gen7RadioButton.Location = new System.Drawing.Point(117, 26);
             this.gen7RadioButton.Name = "gen7RadioButton";
             this.gen7RadioButton.Size = new System.Drawing.Size(17, 16);
@@ -132,6 +134,7 @@
             // gen6RadioButton
             // 
             this.gen6RadioButton.AutoSize = true;
+            this.gen6RadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gen6RadioButton.Location = new System.Drawing.Point(117, 57);
             this.gen6RadioButton.Name = "gen6RadioButton";
             this.gen6RadioButton.Size = new System.Drawing.Size(17, 16);
@@ -142,7 +145,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.timeOutputBox);
             this.groupBox2.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 300);
             this.groupBox2.Name = "groupBox2";
@@ -151,42 +154,42 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Output";
             // 
-            // textBox1
+            // timeOutputBox
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(6, 22);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(356, 178);
-            this.textBox1.TabIndex = 3;
+            this.timeOutputBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.timeOutputBox.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeOutputBox.Location = new System.Drawing.Point(6, 22);
+            this.timeOutputBox.Multiline = true;
+            this.timeOutputBox.Name = "timeOutputBox";
+            this.timeOutputBox.ReadOnly = true;
+            this.timeOutputBox.Size = new System.Drawing.Size(356, 178);
+            this.timeOutputBox.TabIndex = 3;
             // 
-            // label4
+            // numberofnpcsLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(18, 154);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 40);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Number \r\nof NPCs";
+            this.numberofnpcsLabel.AutoSize = true;
+            this.numberofnpcsLabel.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberofnpcsLabel.Location = new System.Drawing.Point(18, 154);
+            this.numberofnpcsLabel.Name = "numberofnpcsLabel";
+            this.numberofnpcsLabel.Size = new System.Drawing.Size(84, 40);
+            this.numberofnpcsLabel.TabIndex = 4;
+            this.numberofnpcsLabel.Text = "Number \r\nof NPCs";
             // 
-            // npcCount
+            // npcCountLabel
             // 
-            this.npcCount.AutoSize = true;
-            this.npcCount.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.npcCount.Location = new System.Drawing.Point(168, 12);
-            this.npcCount.Name = "npcCount";
-            this.npcCount.Size = new System.Drawing.Size(231, 153);
-            this.npcCount.TabIndex = 5;
-            this.npcCount.Text = resources.GetString("npcCount.Text");
-            this.npcCount.Visible = false;
-            this.npcCount.Click += new System.EventHandler(this.label5_Click_1);
+            this.npcCountLabel.AutoSize = true;
+            this.npcCountLabel.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.npcCountLabel.Location = new System.Drawing.Point(168, 12);
+            this.npcCountLabel.Name = "npcCountLabel";
+            this.npcCountLabel.Size = new System.Drawing.Size(231, 153);
+            this.npcCountLabel.TabIndex = 5;
+            this.npcCountLabel.Text = resources.GetString("npcCountLabel.Text");
+            this.npcCountLabel.Click += new System.EventHandler(this.label5_Click_1);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Help;
             this.label6.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(18, 126);
             this.label6.Name = "label6";
@@ -199,6 +202,7 @@
             // fidgetCheckBox
             // 
             this.fidgetCheckBox.AutoSize = true;
+            this.fidgetCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.fidgetCheckBox.Location = new System.Drawing.Point(128, 131);
             this.fidgetCheckBox.Name = "fidgetCheckBox";
             this.fidgetCheckBox.Size = new System.Drawing.Size(18, 17);
@@ -221,6 +225,7 @@
             // 
             // targetFrameBox
             // 
+            this.targetFrameBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.targetFrameBox.Location = new System.Drawing.Point(3, 50);
             this.targetFrameBox.Maximum = new decimal(new int[] {
             999999999,
@@ -234,6 +239,7 @@
             // 
             // startingFrameBox
             // 
+            this.startingFrameBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.startingFrameBox.Location = new System.Drawing.Point(3, 18);
             this.startingFrameBox.Maximum = new decimal(new int[] {
             999999999,
@@ -243,6 +249,11 @@
             this.startingFrameBox.Name = "startingFrameBox";
             this.startingFrameBox.Size = new System.Drawing.Size(147, 22);
             this.startingFrameBox.TabIndex = 13;
+            this.startingFrameBox.Value = new decimal(new int[] {
+            478,
+            0,
+            0,
+            0});
             this.startingFrameBox.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // calculateButton
@@ -286,20 +297,22 @@
             this.oldGenLabel.Size = new System.Drawing.Size(209, 187);
             this.oldGenLabel.TabIndex = 9;
             this.oldGenLabel.Text = resources.GetString("oldGenLabel.Text");
+            this.oldGenLabel.Visible = false;
             this.oldGenLabel.Click += new System.EventHandler(this.label5_Click_2);
             // 
-            // npcCount1
+            // npcCount
             // 
-            this.npcCount1.Location = new System.Drawing.Point(100, 172);
-            this.npcCount1.Maximum = new decimal(new int[] {
+            this.npcCount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.npcCount.Location = new System.Drawing.Point(100, 172);
+            this.npcCount.Maximum = new decimal(new int[] {
             20,
             0,
             0,
             0});
-            this.npcCount1.Name = "npcCount1";
-            this.npcCount1.Size = new System.Drawing.Size(46, 22);
-            this.npcCount1.TabIndex = 10;
-            this.npcCount1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged_1);
+            this.npcCount.Name = "npcCount";
+            this.npcCount.Size = new System.Drawing.Size(46, 22);
+            this.npcCount.TabIndex = 10;
+            this.npcCount.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged_1);
             // 
             // Form1
             // 
@@ -307,13 +320,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(392, 518);
-            this.Controls.Add(this.npcCount1);
+            this.Controls.Add(this.npcCount);
             this.Controls.Add(this.oldGenLabel);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.fidgetCheckBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.npcCount);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.npcCountLabel);
+            this.Controls.Add(this.numberofnpcsLabel);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -328,7 +341,7 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.targetFrameBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.startingFrameBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.npcCount1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npcCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,9 +357,9 @@
         private System.Windows.Forms.RadioButton gen7RadioButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label npcCount;
+        private System.Windows.Forms.TextBox timeOutputBox;
+        private System.Windows.Forms.Label numberofnpcsLabel;
+        private System.Windows.Forms.Label npcCountLabel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox fidgetCheckBox;
         private System.Windows.Forms.ToolTip toolTip1;
@@ -355,9 +368,9 @@
         private System.Windows.Forms.Button calculateButton;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label oldGenLabel;
-        private System.Windows.Forms.NumericUpDown targetFrameBox;
-        private System.Windows.Forms.NumericUpDown startingFrameBox;
-        private System.Windows.Forms.NumericUpDown npcCount1;
+        public System.Windows.Forms.NumericUpDown targetFrameBox;
+        public System.Windows.Forms.NumericUpDown startingFrameBox;
+        private System.Windows.Forms.NumericUpDown npcCount;
     }
 }
 

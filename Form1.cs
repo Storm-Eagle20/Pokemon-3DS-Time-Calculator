@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,34 +17,18 @@ namespace Pokemon_RNG_Time_Calculator
             InitializeComponent();
         }
 
-        public static string Convert2timestr(double sec)
-        {
-            if (sec < 60)
-                return sec.ToString("F3") + "s";
-            int min = (int)Math.Floor(sec) / 60;
-            sec -= 60 * min;
-            if (min < 60)
-                return min.ToString() + "m " + sec.ToString("00.000s");
-            int hour = min / 60;
-            min -= 60 * hour;
-            return hour.ToString() + "h " + min.ToString("D2") + "m " + sec.ToString("00.0s");
-        }
-        public static readonly string[,] generation = { { "6", "7" } };
-
-        public int realtime = -1;
-
         bool wasExecuted;
-
-        public double targetframe;
-
-        public static int Startingframe;
-
-        public int framemin;
-        public int framemax;
 
         public decimal frameDifference;
 
-        public string RealTime => framemin == framemax ? "-" : Convert2timestr((framemin + 2 - Startingframe) / 60.0) + " ~ " + Convert2timestr((framemax - Startingframe) / 60.0);
+        public static int starter;
+        public static int target;
+
+        private static int g6SecondsFraction;
+        public static int g6Seconds;
+        public static int g6Minutes;
+        public static int g6Hours;
+        public static int g6Days;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -126,7 +110,7 @@ namespace Pokemon_RNG_Time_Calculator
         }
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            //Gen 7 starting frame is 478.
+            //gen 7 starting frame is 478.
             if (gen7RadioButton.Checked == true && startingFrameBox.Value < 478)
             {
                 startingFrameBox.Value = 478;
@@ -136,6 +120,7 @@ namespace Pokemon_RNG_Time_Calculator
         {    
             frameDifference = targetFrameBox.Value - startingFrameBox.Value;
 
+            //warn user if they select an exorbitantly high frame
             if (gen7RadioButton.Checked == false)
             {
                 if (frameDifference >= 100000000 && wasExecuted == false)
@@ -157,11 +142,68 @@ namespace Pokemon_RNG_Time_Calculator
                 }
             }
         }
-        private void calculateButton_Click(object sender, EventArgs e)
+        public void calculateButton_Click(object sender, EventArgs e)
         {
-            if (gen6RadioButton.Checked == true)
-            {
+            starter = (int)startingFrameBox.Value;
+            target = (int)targetFrameBox.Value;
 
+            //turn frame difference into time for gen 6 use
+            g6SecondsFraction = (int)targetFrameBox.Value - (int)startingFrameBox.Value / 120;
+            g6Seconds = (int)Math.Floor((decimal)g6SecondsFraction);
+            while (g6Seconds >= 60)
+            {
+                g6Minutes += 1;
+                g6Seconds -= 60;
+            }
+            while (g6Minutes >= 60)
+            {
+                g6Hours += 1;
+                g6Minutes -= 60;
+            }
+            while (g6Hours >= 24)
+            {
+                g6Days += 1;
+                g6Hours -= 24;
+            }
+
+            void frames(ref int starter, ref decimal target)
+            {
+                Calculator.startingFrame = starter;
+                Calculator.targetFrame = target;
+            }
+
+            if (targetFrameBox.Value < startingFrameBox.Value)
+            {
+                //failsafe
+                popupWindow targetFrameLowerError = new popupWindow();
+                targetFrameLowerError.ShowDialog();
+            }
+            else
+            {
+                if (gen6RadioButton.Checked == true)
+                {
+                    //more failsafes, inserted here in specific as it only applies to gen 6
+                    if (targetFrameBox.Value % 2 == 1 && startingFrameBox.Value % 2 == 0)
+                    {
+                        popupWindow popupWindow2 = new popupWindow();
+                        popupWindow2.ShowDialog();
+                    }
+                    else if (targetFrameBox.Value % 2 == 0 && startingFrameBox.Value % 2 == 1)
+                    {
+                        popupWindow popupWindow3 = new popupWindow();
+                        popupWindow3.ShowDialog();
+                    }
+                    else
+                    {
+                        timeOutputBox.Text = Calculator.RealTime;
+                    }
+                    
+                    //do the calculation for Gen 6
+                }
+                else if (gen7RadioButton.Checked == true)
+                {
+                    //do the calculation for gen 7
+                }
             }
         }
     }

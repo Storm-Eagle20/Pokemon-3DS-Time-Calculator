@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Pokemon_RNG_Time_Calculator
 {
-    public partial class popupWindow : Form
+    public partial class targetFrameLowerError : Form
     {
-        public popupWindow()
+        public targetFrameLowerError()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void confirmationButton_Click(object sender, EventArgs e)
         {
-           this.Close();
+            this.Close();
         }
     }
 }

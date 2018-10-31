@@ -117,17 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="warningLabel.Text" xml:space="preserve">
-    <value>Warning! Setting a frame above 
-100 million may cause instability.
-Be cautious and don't go too high
-or you may strain your PC or crash
-this program.
-
-This box can also appear if your
-target frame is significantly higher
-than your starting frame.</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
